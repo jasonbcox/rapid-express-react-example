@@ -25,6 +25,14 @@ var NavButton = createReactClass({
 });
 
 var Nav = createReactClass({
+  getInitialState: function() {
+    return {
+      logoText: 'rapid-express-react',
+    };
+  },
+  logoClick: function() {
+    this.setState({logoText: 'hydration worked'});
+  },
   render: function() {
     var navStyle = Object.assign({}, Shared.StyleZDepth1, {
       backgroundColor: 'white',
@@ -39,7 +47,7 @@ var Nav = createReactClass({
 
     return (
       <div style={navStyle}>
-        <div style={navLogoStyle}>rapid-express-react</div>
+        <div style={navLogoStyle} onClick={this.logoClick}>{this.state.logoText}</div>
         <NavButton href="/" title="Home" />
         <NavButton href="/article/test-article" title="Test Article" />
         <NavButton href="/article/test-article" title="Test Article" />

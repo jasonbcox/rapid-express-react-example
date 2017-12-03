@@ -1,6 +1,6 @@
 #!/bin/bash
 
-JS_MAIN="./static/app.js"
+JS_MAIN="./static/main.js"
 JS_BUNDLE="./static/bundle.js"
 JS_BUNDLE_MAP="./static/bundle.js.map"
 BABEL_PRESETS="es2015 react"

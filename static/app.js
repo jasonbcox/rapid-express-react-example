@@ -5,11 +5,6 @@ var createReactClass = require('create-react-class');
 var Shared = require('./shared');
 
 module.exports = createReactClass({
-  getInitialState: function() {
-    return {
-      content: this.props.initialState.content,
-    }
-  },
   render: function() {
     var bodyContentStyle = Object.assign({}, Shared.StyleZDepth1 ,{
       backgroundColor: 'white',
@@ -21,7 +16,7 @@ module.exports = createReactClass({
     return (
       <div>
         <Shared.Nav />
-        <div style={bodyContentStyle} dangerouslySetInnerHTML={{__html: this.state.content}} />
+        <div style={bodyContentStyle}>{this.props.content}</div>
       </div>
     )
   }
