@@ -9,10 +9,7 @@ curl -L http://git.io/n-install | bash
 ```
 
 ```
-Note: Install Ruby before doing this step
-
-sudo gem install listen
-sudo gem install sass
+Install dev tools:
 
 npm install --global browserify watchify exorcist
 ```
