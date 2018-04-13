@@ -10,9 +10,14 @@ var Log = common.log(__filename, 'server');
 
 initServer.initExpress(common, __dirname + '/partials');
 
+var nodeModulesWhitelist = [
+  'rapid-express-react',
+];
 var babelRenderContent = require('rapid-express-react/babelRenderContent')(
+  __dirname,
   __dirname + '/static/content',
-  __dirname + '/static/app');
+  __dirname + '/static/app',
+  nodeModulesWhitelist);
 var pagePartial = 'page';
 
 common.initExpressStaticPath = initServer.initExpressStaticPath;
